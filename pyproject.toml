@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dojo"
+version = "0.1.0"
+description = "Dojo - A Python CLI tool"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+dojo = "dojo.cli:main"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0.0",
+]
