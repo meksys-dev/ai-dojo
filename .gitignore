@@ -30,6 +30,9 @@ htmlcov/
 # Backup files
 *.bak
 
+# Claude
+.claude/settings.local.json
+
 # uv
 .uv/
 uv.lock
