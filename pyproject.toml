@@ -15,5 +15,8 @@ dojo = "dojo.cli:main"
 
 [tool.uv]
 dev-dependencies = [
+    "mypy>=1.19.1",
+    "pre-commit>=4.5.1",
     "pytest>=8.0.0",
+    "ruff>=0.14.9",
 ]

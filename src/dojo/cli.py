@@ -16,7 +16,7 @@ def main() -> int:
         version="%(prog)s 0.1.0",
     )
 
-    args = parser.parse_args()
+    parser.parse_args()
 
     # When no arguments are provided, argparse will show help on -h/--help
     # For now, just print a simple message
