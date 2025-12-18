@@ -14,12 +14,3 @@ repos:
       - id: mypy
         additional_dependencies: []
         args: [--strict]
-
-  - repo: local
-    hooks:
-      - id: pytest
-        name: pytest
-        entry: uv run pytest
-        language: system
-        pass_filenames: false
-        always_run: true
