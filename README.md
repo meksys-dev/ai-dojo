@@ -63,10 +63,37 @@ This project uses pre-commit hooks to ensure code quality. The hooks automatical
 - **Formatting**: Code is formatted with `ruff format`
 - **Linting**: Code is linted with `ruff` (auto-fixes applied when possible)
 - **Type-checking**: Code is type-checked with `mypy` in strict mode
-- **Tests**: All tests pass with `pytest`
 
 To manually run all hooks:
 
 ```bash
 uv run pre-commit run --all-files
 ```
+
+Note: Tests are run in CI, not as pre-commit hooks, to keep commits fast.
+
+## Continuous Integration
+
+This repository uses GitHub Actions for continuous integration. All checks must pass before code can be merged to `main`.
+
+### Workflows
+
+**Pre-commit Checks** (`.github/workflows/pre-commit.yml`)
+- Runs all pre-commit hooks on every push and pull request
+- Ensures code formatting, linting, and type-checking pass
+
+**Tests** (`.github/workflows/tests.yml`)
+- Runs the test suite with `pytest -v` on every push and pull request
+- Validates all tests pass in a clean environment
+
+### Branch Protection
+
+The `main` branch is protected with the following rules:
+
+- ✅ All CI checks must pass before merging
+- ✅ Branches must be up-to-date with `main` before merging
+- ✅ Linear history required (squash or rebase merge only)
+- ✅ No force pushes allowed
+- ✅ No direct commits to `main` (all changes via pull requests)
+- ✅ Rules enforced for all users, including admins
+- ✅ Merged branches are automatically deleted
