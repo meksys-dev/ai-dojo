@@ -37,9 +37,13 @@ uv run dojo --help
 
 Output:
 ```
-usage: dojo [-h] [--version]
+usage: dojo [-h] [--version] {training} ...
 
 Dojo - A Python CLI tool
+
+positional arguments:
+  {training}  Available commands
+    training  Receive guidance on your path to AI mastery
 
 options:
   -h, --help  show this help message and exit
