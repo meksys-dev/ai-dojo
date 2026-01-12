@@ -97,3 +97,26 @@ The `main` branch is protected with the following rules:
 - ✅ No direct commits to `main` (all changes via pull requests)
 - ✅ Rules enforced for all users, including admins
 - ✅ Merged branches are automatically deleted
+
+## Documentation
+
+Project documentation lives in the `docs` branch, an orphan branch with separate history from the main codebase.
+
+### Local Setup for Contributors
+
+AI agent commands and development workflows assume documentation is set up as a sibling worktree:
+
+```bash
+# From the project root, add the docs branch as a sibling worktree
+git worktree add ../docs docs
+```
+
+This creates the following directory structure:
+
+```
+parent-directory/
+├── python/          # main branch (this repo)
+└── docs/            # docs branch worktree
+```
+
+With this setup, documentation can be edited alongside code without branch switching.
