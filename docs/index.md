@@ -1,44 +1,48 @@
-# Welcome to Dojo Documentation
+# Dojo Documentation
 
-Dojo is a Python CLI tool for [add your project description here].
+Dojo is a Python CLI tool. This is a minimal scaffold project demonstrating a
+standard Mekara version 0.1.0 project structure with best practices for Python
+development.
 
-## Getting Started
+## What is Dojo?
 
-To get started with Dojo, you can install it using pip:
+Dojo is a command-line interface tool built with Python's argparse. It serves as
+a template for building Python CLI applications with modern tooling and
+development practices.
 
-```bash
-pip install dojo
-```
+## Key Features
 
-Or using uv:
+- Modern Python packaging with `uv`
+- Comprehensive pre-commit hooks (formatting, linting, type-checking)
+- GitHub Actions CI/CD workflows
+- Standard Mekara project structure
 
-```bash
-uv add dojo
-```
+## Documentation Structure
 
-## Usage
+This documentation follows the
+[standard Mekara documentation conventions](https://github.com/Meksys/mek/tree/main/project-scaffold-script/docs/docs/code-base/documentation/standard-mekara-docs.md).
+Here's how to navigate it:
 
-Run the CLI tool with:
+- **[Usage](usage/index.md)** – How to install and use Dojo as an end user
+- **[Development](development/index.md)** – How to set up your development
+  environment and run development tools
+- **[Code-base](code-base/index.md)** – Implementation details and architecture
+  for contributors
 
-```bash
-dojo --help
-```
+## Quick Links
 
-## Features
+- [Installation Guide](usage/index.md#installation)
+- [Getting Started with Development](development/index.md)
+- [Project Structure](code-base/index.md)
 
-- [Feature 1]
-- [Feature 2]
-- [Feature 3]
+## About This Project
 
-## Documentation
+Dojo is built as a standard Mekara version 0.1.0 project, incorporating
+conventions and best practices for Python CLI development. It uses:
 
-- [API Reference](api/index.md) - Auto-generated API documentation
-- [User Guide](guide/index.md) - Step-by-step guides
-
-## Contributing
-
-Contributions are welcome! Please check out the contributing guidelines.
-
-## License
-
-[Add license information here]
+- **uv** for fast, reliable dependency management
+- **ruff** for formatting and linting
+- **mypy** for strict type checking
+- **pytest** for testing
+- **pre-commit** for automated quality checks
+- **GitHub Actions** for continuous integration
