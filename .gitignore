@@ -28,3 +28,6 @@ Thumbs.db
 
 # Pre-commit
 .pre-commit-config.yaml.bak
+
+# Claude Code
+.claude/settings.local.json

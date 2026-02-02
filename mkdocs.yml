@@ -61,6 +61,7 @@ nav:
       - usage/index.md
   - Development:
       - development/index.md
+      - development/workflows.md
   - Code-base:
       - code-base/index.md
       - code-base/dojo.md
