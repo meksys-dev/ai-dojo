@@ -4,15 +4,22 @@ Rebase the current branch onto main, retag all commits with their original tags,
 
 ## Process
 
-### Step 0: Prepare for rebase
+### Step 0: Determine which branch to rebase and prepare
 
-Check the current branch, update main, and return to the current branch:
+**CRITICAL**: Check if the user provided a branch name in $ARGUMENTS. If they did, that's the branch to checkout and rebase onto main. If $ARGUMENTS is empty, use the current branch.
+
+Example: If user runs `/rebase-and-retag training/help-sync`, checkout `training/help-sync` first, then rebase it onto main.
+
+Checkout the branch to rebase (if specified), update main, and return to that branch:
 
 ```bash
-current_branch=$(git branch --show-current)
+# If $ARGUMENTS provided a branch name, checkout that branch first
+# Otherwise, stay on current branch
+target_branch="<branch-from-arguments-or-current>"
+git checkout "$target_branch"
 git checkout main
 git pull
-git checkout "$current_branch"
+git checkout "$target_branch"
 ```
 
 ### Step 1: Record commit mapping
