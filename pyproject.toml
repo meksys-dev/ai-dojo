@@ -13,8 +13,8 @@ dependencies = []
 [project.scripts]
 dojo = "dojo.cli:main"
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
     "mypy>=1.19.1",
     "pre-commit>=4.5.1",
     "pytest>=8.0.0",
